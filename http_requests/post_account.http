@@ -1,0 +1,6 @@
+POST HTTP://localhost:8080/accounts/
+
+{
+    "owner":"Jack Daniels",
+    "currency":"USD"
+}
