@@ -1,0 +1,8 @@
+POST HTTP://localhost:8080/transfers/
+
+{
+    "from_account_id": 251,
+    "to_account_id": 247,
+    "amount": 10,
+    "currency":"EUR"
+}
