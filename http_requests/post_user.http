@@ -1,0 +1,8 @@
+POST HTTP://localhost:8080/users/
+
+{
+    "username":"Jack123",
+    "full_name":"Jack Daniels",
+    "email":"DanielsJack@gmail.com",
+    "password":"secret123"
+}
