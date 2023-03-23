@@ -1,6 +1,8 @@
-POST HTTP://localhost:8080/accounts/
+POST HTTP://localhost:8080/accounts/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer v2.local.H_cXCmYPqe0qRz6yxeOPACpEcCOPy48Y3a2zLKv2YTzxULCG1zGWqwntUWaAhO7TIwsJI3x9TIyYKtSdFBC7nv45m-Ip2Apfq_vT7HyUg3WqmpKiqZ466hH_l8gzbK7dSaWKMeS_fROVNayFa2YNOfM_D3HOaURc7DmZz_SXFs29-BBJXsBh0boHMSIaImO4lqAb6-bRM4FpM6ZoA-dLwK_qiPjZDzRxzB3vaiPw6P7paCrJBlXzpYKVHgVti3c-mZ9bLeIs84hgcoYbPKFt.bnVsbA
 
 {
-    "owner":"Jack Daniels",
-    "currency":"USD"
+    "owner":"Jack123",
+    "currency":"CAD"
 }

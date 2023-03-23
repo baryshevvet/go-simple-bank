@@ -1,8 +1,9 @@
-POST HTTP://localhost:8080/users/
+POST HTTP://localhost:8080/users/ HTTP/1.1
+content-type: application/json
 
 {
-    "username":"Jack123",
-    "full_name":"Jack Daniels",
-    "email":"DanielsJack@gmail.com",
-    "password":"secret123"
+    "username":"Ron",
+    "full_name":"Ron Atkins",
+    "email":"RonAtrkins@gmail.com",
+    "password":"secret"
 }

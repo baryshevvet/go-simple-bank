@@ -1,0 +1,8 @@
+POST HTTP://localhost:8080/accounts/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer v2.local.qaTcM01FVVqw3aKvHXc2ZkGlxg5YV3mZt30nTuJETczAs6JVDftMcnaWf-w1SB42hYlN3TPzi6ePEowmvCofS4MP-wvPxFkm-KWeViKNHbKDbFl14USxYKxOxtX235pbkH6sPXIjwGYfvGhqTwqZI1JADKMjUeT4ELrOB8PE9VWm147waSESDmSRl3Np2hIljJPcHnPFy8qzFaAtzOqwX32g__z4R_M1JBmxXMCG4pV2rMMid3G4EkuiEUDs3hAb2oFbyXR7oacH5RQ.bnVsbA
+
+{
+    "owner":"Jack123",
+    "currency":"EUR"
+}
