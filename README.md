@@ -1,5 +1,6 @@
 # go-simple-bank
 video lectures by techschool
+# git test access token
 
 1. Install golang
 sudo apt install golang-go
