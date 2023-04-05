@@ -36,8 +36,8 @@ func RandomOwner() string {
 	return RandomString(6)
 }
 
-// RandomMondey generates a random amount pf money
-func RandomMondey() int64 {
+// RandomMoney generates a random amount pf money
+func RandomMoney() int64 {
 	return RandomInt(0, 1000)
 }
 

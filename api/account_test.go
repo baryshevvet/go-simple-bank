@@ -439,7 +439,7 @@ func randomAccount(owner string) db.Account {
 	return db.Account{
 		ID:       util.RandomInt(1, 1000),
 		Owner:    owner,
-		Balance:  util.RandomMondey(),
+		Balance:  util.RandomMoney(),
 		Currency: util.RandomCurrency(),
 	}
 }
