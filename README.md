@@ -19,3 +19,10 @@ sudo make createdb
 
 5. Migrate table schemas
 sudo make migrateup
+
+#####################
+# Build docker image #
+sudo docker build -t simplebank:latest .
+
+# Run docker image #
+sudo docker run --name simplebank -p 8080:8080 simplebank:latest
