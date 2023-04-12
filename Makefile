@@ -1,5 +1,5 @@
 postgres:
-	sudo docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=password -d postgres:latest
+	sudo docker run --name postgres12 --network bank-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=password -d postgres:latest
 
 #postgres:
 #	sudo docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=password -d postgres:12-alpine
@@ -22,9 +22,6 @@ migratedown:
 migratedown1:
 	migrate -path db/migration -database "postgresql://root:password@localhost:5432/simple_bank?sslmode=disable" -verbose down 1
 
-#migarte:
-#	igrate create -ext sql -dir db/migration -seq init_schema
-
 sqlc:
 	sqlc generate
 
@@ -37,4 +34,10 @@ server:
 mock:
 	mockgen -package mockdb -destination db/mock/store.go github.com/techschool/simplebank/db/sqlc Store
 
-.PHONY: postgres createdb dropdb migrateup migrateup1 migratedown migratedown2 sqlc test server mock
+buildcontainer:
+	sudo docker build -t simplebank:latest .
+	
+runsimplebank:
+	sudo docker run --name simplebank --network bank-network -p 8080:8080 -e GIN_MODE=release -e DB_SOURCE="postgresql://root:password@postgres12:5432/simple_bank?sslmode=disable" simplebank:latest
+
+.PHONY: postgres createdb dropdb migrateup migrateup1 migratedown migratedown2 sqlc test server mock buildcontainer runsimplebank
