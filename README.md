@@ -33,3 +33,6 @@ sudo docker run --name simplebank --network bank-network -p 8080:8080 -e GIN_MOD
 
 # Check if the both containers are connected to our custom network
 sudo docker inspect bank-network
+
+sudo docker compose up
+sudo docker compose down
