@@ -36,3 +36,15 @@ sudo docker inspect bank-network
 
 sudo docker compose up
 sudo docker compose down
+
+# AWS access key
+Access key Id 1
+AKIA2AB5HW66E6Q3BQE3
+
+Secret access key 1
+
+Access Key ID 2
+AKIA2AB5HW66GXB6ZRJP
+
+Secret access key 2
+9/c0Rae4fuuX8De26Sy1shr5kElb0RHYV9xv/TU6
